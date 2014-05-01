@@ -1,5 +1,5 @@
 #Corog
-![image](https://github.com/corog/corog/raw/master/logo.jpg)
+![image](https://github.com/corog/framework/raw/master/logo.jpg)
 Corog is a lightweight framework for php development.
 
 ##Installation
