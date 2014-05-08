@@ -10,7 +10,7 @@ class Router {
 	}
 	
 	public function parseRoute()  {
-		if (null !== $_SERVER['PATH_INFO']) {
+		if (isset($_SERVER['PATH_INFO'])) {
 			$pathInfos = explode('/' , $_SERVER['PATH_INFO']);
 			if (!empty($pathInfos[1])) {
 				$this->routeInfo['module'] = trim( $pathInfos[1] );

@@ -10,4 +10,20 @@ return array(
 	'_viewDir' =>'views',
 	'_modelDir' =>'models',
 	'_helperDir' =>'helpers',
+	'_dataBase' => array(
+			'_driverType' => 'Mysqli',
+			'_rwType' => 'masterslave',
+			'_master'=>array(
+			'_host' => 'localhost',
+			'_user' => 'root',
+			'_passwd' => '',
+			'_dbName' => 'test',
+			),
+			'_slave'=>array(
+			'_host' => 'localhost',
+			'_user' => 'root',
+			'_passwd' => '',
+			'_dbName' => 'test',
+			),
+		),
 );

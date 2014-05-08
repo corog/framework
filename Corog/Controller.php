@@ -12,15 +12,11 @@ class Controller {
 		$fileName = APP_ROOT .'/'. Corog::getInstance()->getConfig()['_modelDir'] .'/'. $modelName.'Model.php';
 		if (is_readable($fileName)) {
 			$mName = $modelName.'Model';
-			$model = new $mName();
-			$tmp = $model->_table;
-			if (empty($tmp))
-				$model->_table = $modelName;
+			$model = new $mName($modelName);
 			return $model;
 		}
 		else {
-			$newModel = new Model();
-			$newModel->_table = $modelName;
+			$newModel = new Model($modelName);
 			return $newModel;
 		}
 	}
